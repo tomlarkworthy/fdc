@@ -1,0 +1,12 @@
+<div id="observablehq-website-804fdd2a"></div>
+<p>Credit: <a href="https://observablehq.com/d/bce0efbc95a19afa@826">Year Five Season of Creative Fire Day 47 Time of the Inventory 11
+ by Fairy Dog</a></p>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/bce0efbc95a19afa@826.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "website") return new Inspector(document.querySelector("#observablehq-website-804fdd2a"));
+});
+</script>
