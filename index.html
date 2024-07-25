@@ -1,5 +1,6 @@
 <div id="observablehq-website-c9741a3c"></div>
 <div id="observablehq-viewof-focus_day-c9741a3c"></div>
+<div id="observablehq-styling"></div>
 <p>Credit: <a href="https://observablehq.com/d/bce0efbc95a19afa">Year Five Season of Creative Fire Day 47 Time of the Inventory 11
  by Fairy Dog</a></p>
 
@@ -10,6 +11,7 @@ import define from "https://api.observablehq.com/d/bce0efbc95a19afa.js?v=4";
 new Runtime().module(define, name => {
   if (name === "website") return new Inspector(document.querySelector("#observablehq-website-c9741a3c"));
   if (name === "viewof focus_day") return new Inspector(document.querySelector("#observablehq-viewof-focus_day-c9741a3c"));
+  if (name === "styling") return new Inspector(document.querySelector("#observablehq-styling"));
   return ["focus_data"].includes(name);
 });
 </script>
