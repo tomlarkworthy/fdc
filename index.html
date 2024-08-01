@@ -22,6 +22,15 @@
   });
 }
  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+
+  // Update UI to notify the user they can add to home screen
+  showInstallPromotion();
+});
 const installButton = document.getElementById('installButton');
   installButton.style.display = 'block';
 
@@ -40,15 +49,7 @@ const installButton = document.getElementById('installButton');
       deferredPrompt = null;
     });
   });
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent the mini-infobar from appearing on mobile
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
 
-  // Update UI to notify the user they can add to home screen
-  showInstallPromotion();
-});
   
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
 import define from "https://api.observablehq.com/d/bce0efbc95a19afa.js?v=4";
