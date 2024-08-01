@@ -21,9 +21,8 @@
     });
   });
 }
-  let deferredPrompt;
-  const showInstallPromotion = () => {
-  const installButton = document.getElementById('installButton');
+ let deferredPrompt;
+const installButton = document.getElementById('installButton');
   installButton.style.display = 'block';
 
   installButton.addEventListener('click', () => {
@@ -41,7 +40,6 @@
       deferredPrompt = null;
     });
   });
-};
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent the mini-infobar from appearing on mobile
   e.preventDefault();
