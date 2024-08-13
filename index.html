@@ -24,7 +24,7 @@ import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/run
 import define from "https://api.observablehq.com/d/bce0efbc95a19afa.js?v=4";
 new Runtime().module(define, name => {
   if (name === "website") return new Inspector(document.querySelector("#observablehq-website-c9741a3c"));
-  if (name === "viewof focus_day") return new Inspector(document.querySelector("#observablehq-viewof-focus_day-c9741a3c"));
+  if (name === "viewof nice_date") return new Inspector(document.querySelector("#observablehq-viewof-focus_day-c9741a3c"));
   if (name === "styling") return new Inspector(document.querySelector("#observablehq-styling"));
   return ["focus_data"].includes(name);
 });
